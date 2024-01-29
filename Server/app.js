@@ -28,6 +28,9 @@ app.set("views", "./views")
 
 
 //routes
+app.get('/',(req,res)=>{
+    res.send("200 OK")
+})
 app.use("/api/v1/",indexRoute)
 app.use("/api/v1/alert",alertRoute)
 app.use("/api/v1/contents",contentRoute)
