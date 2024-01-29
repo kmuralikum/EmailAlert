@@ -16,7 +16,6 @@ router.post("/",async(req,res)=>{
         const newContent = await Content.create({
         eventType,
         content,
-        isweekly
     })
 
     if(newContent){

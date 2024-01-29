@@ -37,8 +37,8 @@ app.use("/api/v1/attendance",checkInAndOutRoute)
 
 
 //Cron
-// AttdCron.start()
-// WeeklyCron.start()
+AttdCron.start()
+WeeklyCron.start()
 
 
 //listening Port
