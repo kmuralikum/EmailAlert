@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const Connection = ()=>{
     try{
-        const db = mongoose.connect("mongodb://0.0.0.0:27017/emailQueue")
+        const db = mongoose.connect("mongodb+srv://admin:admin@cluster0.rwmduay.mongodb.net/?retryWrites=true&w=majority")
         if(db){
             console.log("Db Connected Succesfully");
         }
