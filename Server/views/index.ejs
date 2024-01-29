@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Email Queue</title>
+</head>
+<body>
+    <form action="/api/v1/add-alert" method="post">
+        
+        <label for="email">Email : </label>
+        <input type="text" id="email" name="email">
+
+        <label for="events">Events : </label>
+
+        <% Events.forEach(event => { %>
+            <input type="checkbox" id="<%= event._id %>" name="events" value="<%= event.events %>"> 
+            <%= event.events %> <br>
+        <% }) %>
+        <br>
+        <button type="submit"> Submit </button>
+    </form>
+</body>
+</html>
