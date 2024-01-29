@@ -1,8 +1,10 @@
 const mongoose = require("mongoose")
+require("dotenv").config()
+const URL = process.env.MONGO_URL
 
 const Connection = ()=>{
     try{
-        const db = mongoose.connect("mongodb+srv://admin:admin@cluster0.rwmduay.mongodb.net/?retryWrites=true&w=majority")
+        const db = mongoose.connect(URL)
         if(db){
             console.log("Db Connected Succesfully");
         }
