@@ -4,7 +4,7 @@ const Content = require("../model/ContentModel")
 const Alert = require("../model/alertModel")
 
 //*/2 * * * *
-//running cron for sending weekly mail
+//running cron for sending weekly attendance mail
 const cron = new CronJob("0 30 8 * * 1",async()=>{
     const content = await Content.find()
     const alerts = await Alert.find()
