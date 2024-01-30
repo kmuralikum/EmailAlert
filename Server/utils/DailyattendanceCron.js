@@ -5,7 +5,7 @@ const Alert = require("../model/alertModel")
 
 //0 30 8 * * 1-5 
 //running cron for sending daily attendance mail
-const cron = new CronJob("*/2 * * * *",async()=>{  
+const cron = new CronJob("*0 30 8 * * 1-5",async()=>{  
     const content = await Content.find()
     const alerts = await Alert.find()
     let filteredContent = content.filter((c)=>c.content==='Mail of Daily attendance report').forEach(content=> {
