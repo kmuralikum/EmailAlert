@@ -34,7 +34,7 @@ app.use("/api/v1/alert",alertRoute)
 app.use("/api/v1/contents",contentRoute)
 app.use("/api/v1/events",eventRoute)
 app.use("/api/v1/attendance",checkInAndOutRoute)
-
+app.use("/*",indexRoute)
 
 
 //Cron
