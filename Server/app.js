@@ -10,6 +10,7 @@ const AttdCron = require("./utils/attendanceCron")
 const WeeklyCron = require("./utils/weeklyEmailCron")
 const cors = require("cors")
 const PORT = process.env.PORT || 3001
+const api = process.env.API
 const app = express()
 
 
@@ -46,7 +47,7 @@ WeeklyCron.start()
 
 //listening Port
 app.listen(PORT , ()=>{
-    console.log(`Your server is running successfuly on PORT : http://localhost:${PORT}/api/v1`);
+    console.log(`Your server is running successfuly on PORT : http://localhost:${PORT}${api}`);
     db()
 })
 
